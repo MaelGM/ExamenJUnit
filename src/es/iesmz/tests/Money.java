@@ -8,7 +8,12 @@ public class Money {
 
     public Money() {}
 
-    public float change(TipoMoneda eur, TipoMoneda usd, float v) {
-        return -1
+    public float change(TipoMoneda origen, TipoMoneda destino, float money) {
+        if (money < 0) return -1f;
+        if (!origen.equals(TipoMoneda.EUR) && !origen.equals(TipoMoneda.GBP) && !origen.equals(TipoMoneda.USD)) return -1f;
+        if (!destino.equals(TipoMoneda.EUR) && !destino.equals(TipoMoneda.GBP) && !destino.equals(TipoMoneda.USD)) return -1f;
+
+
+        return 1;
     }
 }
